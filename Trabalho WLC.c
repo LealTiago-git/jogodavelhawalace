@@ -112,3 +112,71 @@ int modo_jogo(void)
 
     return opcoes_modo_jogo; // Retornar a opção escolhida.
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//condiçoes de vitória(linha)
+            if(jogo[0][0] == '0' && jogo[0][1] == '0' && jogo[0][2] == '0' ||
+               jogo[1][0] == '0' && jogo[1][1] == '0' && jogo[1][2] == '0' ||
+               jogo[2][0] == '0' && jogo[2][1] == '0' && jogo[2][2] == '0'){
+                printf("\nParabens! O jogador 1 venceu!\n");
+                ganhou = 1;
+            }
+
+            if(jogo[0][0] == 'X' && jogo[0][1] == 'X' && jogo[0][2] == 'X' ||
+               jogo[1][0] == 'X' && jogo[1][1] == 'X' && jogo[1][2] == 'X' ||
+               jogo[2][0] == 'X' && jogo[2][1] == 'X' && jogo[2][2] == 'X'){
+                printf("\nParabens! O jogador 2 venceu!\n");
+                ganhou = 1;
+            }
+
+//condiçoes de vitória(coluna)
+            if(jogo[0][0] == '0' && jogo[1][0] == '0' && jogo[2][0] == '0' ||
+               jogo[0][1] == '0' && jogo[1][1] == '0' && jogo[2][1] == '0' ||
+               jogo[0][2] == '0' && jogo[1][2] == '0' && jogo[2][2] == '0'){
+                printf("\nParabens! O jogador 1 venceu!\n");
+                ganhou = 1;
+            }
+
+            if(jogo[0][0] == 'X' && jogo[1][0] == 'X' && jogo[2][0] == 'X' ||
+               jogo[0][1] == 'X' && jogo[1][1] == 'X' && jogo[2][1] == 'X' ||
+               jogo[0][2] == 'X' && jogo[1][2] == 'X' && jogo[2][2] == 'X'){
+                printf("\nParabens! O jogador 2 venceu!\n");
+                ganhou = 1;
+            }
+
+//condiçoes de vitória(diagonal 1)
+            if(jogo[0][0] == '0' && jogo[1][1] == '0' && jogo[2][2] == '0'){
+                printf("\nParabens! O jogador 1 venceu!\n");
+                ganhou = 1;
+            }
+
+            if(jogo[0][0] == 'X' && jogo[1][1] == 'X' && jogo[2][2] == 'X'){
+                printf("\nParabens! O jogador 2 venceu!\n");
+                ganhou = 1;
+            }
+
+// condiçoes de vitória(diagonal 2)
+            if(jogo[0][2] == '0' && jogo[1][1] == '0' && jogo[2][0] == '0'){
+                printf("\nParabens! O jogador 1 venceu!\n");
+                ganhou = 1;
+            }
+
+            if(jogo[0][2] == 'X' && jogo[1][1] == 'X' && jogo[2][0] == 'X'){
+                printf("\nParabens! O jogador 2 venceu!\n");
+                ganhou = 1;
+            }
